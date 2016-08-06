@@ -1,6 +1,7 @@
 var openExternal = require("open") // To open the default browser.
 var BrowserWindow = require('browser-window')	// Module to create native browser window.
-
+var info_path = require('path').join(require('app').getPath("userData"), "tweetdeck-bounds-info.json")	// 画面サイズを保存しているjson
+var bounds_file = require('fs')	// jsonファイルの書き出し
 
 var browserWindows = [] // An array of internal browser windows.
 
@@ -27,7 +28,16 @@ var defaultWebPreferences = {
 }
 
 function openTrusted(url) {
-	var newWindow = new BrowserWindow({"web-preferences": defaultWebPreferences})
+	var bounds_info;
+	try {
+		bounds_info = JSON.parse(bounds_file.readFileSync(info_path, 'utf8'))
+	}
+	catch(e) {
+		bounds_info = {width: 800, height: 1000}  // デフォルト
+	}
+
+	// bounds_infoの結果を元にWindowのサイズを決定
+	var newWindow = new BrowserWindow(bounds_info, {"web-preferences": defaultWebPreferences})
 
 	newWindow.webContents.on('new-window', function(event, url, frameName, disposition, options) {
 		openUrl(url)
@@ -35,6 +45,8 @@ function openTrusted(url) {
 	})
 
 	newWindow.on('close', function() {
+		// 閉じる前にWindowの位置とサイズを記憶する
+		bounds_file.writeFileSync(info_path, JSON.stringify(newWindow.getBounds()))
 		cleanUp(newWindow)
 	})
 

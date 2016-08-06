@@ -5,7 +5,7 @@ var browser = require('./browser.js')
 // Report crashes
 require('crash-reporter').start()
 // Keep a global reference of the window object, if you don't, the window will be closed automatically when the JavaScript object is garbage collected.
-var mainWindow = null
+var browserWindow = null
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function() {
