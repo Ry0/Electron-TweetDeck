@@ -39,8 +39,8 @@ npm start
 cd ..
 npm install -g asar
 asar pack ./Electron-TweetDeck ./Electron-TweetDeck.asar
-npm install -gelectron-packager
-# option --platform=<all|linux|win32|darwin> --arch=<all|ia32|x64>
+npm install -g electron-packager
+# option --platform=<all|linux|win32|darwin> --arch=<all|ia32|x64> --icon==<path>
 electron-packager ./Electron-TweetDeck Electron-TweetDeck --platform=all --arch=x64 --version=0.34.0
 ```
 
