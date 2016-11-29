@@ -21,16 +21,12 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 ```bash
 nodebrew ls-remote #適当に最新バージョンを確認してインストール
-nodebrew install-binary v7.20
+nodebrew install-binary v7.2.0
 nodebrew use v7.2.0
 node -v
 ```
 
 ## electron install
-
-```bash
-npm install electron-prebuilt@0.34.5 --save-dev
-```
 
 ```bash
 git clone https://github.com/Ry0/Electron-TweetDeck.git
