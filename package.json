@@ -1,11 +1,16 @@
 {
   "name": "Electron-TweetDeck",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A very simple Electron based program that puts TweetDeck in its own window because the old and obsolete official client broke.",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js"
   },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/Ry0/Electron-TweetDeck"
+  },
+  "license": "BSD-2-Clause",
   "devDependencies": {
     "electron-prebuilt": "^0.34.0"
   },
