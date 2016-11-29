@@ -12,7 +12,7 @@
   },
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "electron-prebuilt": "^0.34.0"
+    "electron-prebuilt": "^0.36.5"
   },
   "dependencies": {
     "open": "0.0.5"

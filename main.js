@@ -9,14 +9,14 @@ var browserWindow = null
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function() {
-	// On OS X it is common for applications and their menu bar to stay active until the user quits explicitly with Cmd + Q
-	if (process.platform != 'darwin') {
-		app.quit()
-	}
+  // On OS X it is common for applications and their menu bar to stay active until the user quits explicitly with Cmd + Q
+  if (process.platform != 'darwin') {
+    app.quit()
+  }
 })
 
 // This method will be called when Electron has finished initialization and is ready to create browser windows.
 app.on('ready', function() {
-	// Create the browser window.
-	mainWindow = browser.openUrl('https://tweetdeck.twitter.com', true, true)
+  // Create the browser window.
+  mainWindow = browser.openUrl('https://tweetdeck.twitter.com', true, true)
 })
