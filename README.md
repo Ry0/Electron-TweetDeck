@@ -7,7 +7,13 @@ It kinda works.
 
 It's sorta buggy, so I'll fix things if and when I find out how to fix them and get the time to.
 
-## node install (For Ubuntu)
+# Unique function
+* It can manage to the latest Electron (1.4.10).
+* Memory of window size and closed place.
+* Modification of Japanese font (for Windows)
+
+# How to install and build
+## node install (For Ubuntu, Mac)
 ```bash
 curl -L git.io/nodebrew | perl - setup
 ```
