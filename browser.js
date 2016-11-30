@@ -1,7 +1,9 @@
-var openExternal = require("open") // To open the default browser.
-var BrowserWindow = require('browser-window') // Module to create native browser window.
-var info_path = require('path').join(require('app').getPath("userData"), "tweetdeck-bounds-info.json")  // 画面サイズを保存しているjson
-var bounds_file = require('fs') // jsonファイルの書き出し
+const electron = require('electron')
+const openExternal = require("open") // To open the default browser.
+const BrowserWindow = electron.BrowserWindow;
+const app = electron.app
+const info_path = require('path').join(electron.app.getPath("userData"), "tweetdeck-bounds-info.json")  // 画面サイズを保存しているjson
+const bounds_file = require('fs') // jsonファイルの書き出し
 
 var browserWindows = [] // An array of internal browser windows.
 
@@ -80,7 +82,8 @@ function openTrusted(url) {
   var newWindow = new BrowserWindow(options_info)
 
   newWindow.webContents.on('new-window', function(event, url, frameName, disposition, options) {
-    openUrl(url, false, false)
+    openUrl(url)
+    // openUrl(url, false, false)
     event.preventDefault()
   })
 

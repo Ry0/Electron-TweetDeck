@@ -1,11 +1,20 @@
-var app = require('app') // Module to control application life.
-var Menu = require('menu') // Control the menubar of the program.
-var browser = require('./browser.js')
+"use strict"
+const electron = require('electron')
+const app = electron.app;
+const Menu = electron.menu // Control the menubar of the program.
+const browser = require('./browser.js')
 
 // Report crashes
-require('crash-reporter').start()
+const crashReporter = electron.crashReporter
+crashReporter.start({
+  productName: 'Electron-TweetDeck',
+  companyName: 'Ry0',
+  submitURL: 'https://github.com/Ry0/Electron-TweetDeck/pulls',
+  autoSubmit: false
+})
+
 // Keep a global reference of the window object, if you don't, the window will be closed automatically when the JavaScript object is garbage collected.
-var browserWindow = null
+let mainWindow;
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function() {
