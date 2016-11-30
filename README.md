@@ -41,13 +41,13 @@ npm install -g asar
 asar pack ./Electron-TweetDeck ./Electron-TweetDeck.asar
 npm install -g electron-packager
 # option --platform=<all|linux|win32|darwin> --arch=<all|ia32|x64> --icon==<path>
-electron-packager ./Electron-TweetDeck Electron-TweetDeck --platform=all --arch=x64 --version=0.34.0
+electron-packager ./Electron-TweetDeck Electron-TweetDeck --platform=all --arch=x64 --version=1.4.10
 ```
 
 ## Ubuntuでランチャー登録
 
 ```bash
-cp Electron-TweetDeck-linux-x64/resources/app/icon/TweetDeck.desktop /usr/share/applications/
+sudo cp Electron-TweetDeck-linux-x64/resources/app/icon/TweetDeck.desktop /usr/share/applications/
 sudo mv Electron-TweetDeck-linux-x64 /usr/lib/
 ```
 
