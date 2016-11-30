@@ -1,6 +1,6 @@
 {
   "name": "Electron-TweetDeck",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A very simple Electron based program that puts TweetDeck in its own window because the old and obsolete official client broke.",
   "main": "main.js",
   "scripts": {
