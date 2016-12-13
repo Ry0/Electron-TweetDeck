@@ -43,8 +43,8 @@ npm start
 
 ```bash
 cd ..
-npm install -g asar
-asar pack ./Electron-TweetDeck ./Electron-TweetDeck.asar
+npm install -g asar # emo:ビルドするだけなら必要なし
+asar pack ./Electron-TweetDeck ./Electron-TweetDeck.asar # emo:ビルドするだけなら必要なし
 npm install -g electron-packager
 # option --platform=<all|linux|win32|darwin> --arch=<all|ia32|x64> --icon==<path>
 electron-packager ./Electron-TweetDeck Electron-TweetDeck --platform=all --arch=x64 --version=1.4.10
