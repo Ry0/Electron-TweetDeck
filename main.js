@@ -1,9 +1,9 @@
-"use strict"
 const electron = require('electron')
-const app = electron.app;
-const Menu = electron.menu // Control the menubar of the program.
+const app = electron.app
+const Menu = electron.Menu;
+const join = require('path').join;
 const browser = require('./browser.js')
-
+const openAboutWindow = require('about-window').default;
 // Report crashes
 const crashReporter = electron.crashReporter
 crashReporter.start({
@@ -28,4 +28,20 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   // Create the browser window.
   mainWindow = browser.openUrl('https://tweetdeck.twitter.com', true, true)
+
+  const menu = Menu.buildFromTemplate([
+      {
+          label: 'Help',
+          submenu: [
+              {
+                  label: 'About This App',
+                  click: () => openAboutWindow({
+                              icon_path: join(__dirname, './icon/about.png'),
+                              copyright: 'Copyright (c) 2016 Ry0_Ka'
+                          })
+              }
+          ]
+      }
+  ]);
+  Menu.setApplicationMenu(menu);
 })
