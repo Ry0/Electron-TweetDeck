@@ -53,7 +53,7 @@ electron-packager ./Electron-TweetDeck Electron-TweetDeck --platform=all --arch=
 ## Ubuntuでランチャー登録
 
 ```bash
-sudo cp Electron-TweetDeck-linux-x64/resources/app/icon/TweetDeck.desktop /usr/share/applications/
+sudo cp Electron-TweetDeck-linux-x64/resources/app/icon/electron-tweetdeck.desktop /usr/share/applications/
 sudo mv Electron-TweetDeck-linux-x64 /usr/lib/
 ```
 
