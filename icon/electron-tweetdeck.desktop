@@ -1,13 +1,12 @@
-#!/usr/bin/env xdg-open
 [Desktop Entry]
 Encoding=UTF-8
 Version=1.0
 Type=Application
 Name=TweetDeck by Twitter
-Path=/usr/lib/Electron-TweetDeck-linux-x64/
+Icon=electron-tweetdeck.png
+Path=/usr/lib/Electron-TweetDeck-linux-x64
 Exec=/usr/lib/Electron-TweetDeck-linux-x64/Electron-TweetDeck
-Icon=/usr/lib/Electron-TweetDeck-linux-x64/resources/app/icon/icon128.png
 StartupNotify=false
-StartupWMClass=Electron
+StartupWMClass=Electron-TweetDeck
 OnlyShowIn=Unity;
 X-UnityGenerated=true

@@ -29,7 +29,7 @@ var defaultWebPreferences = {
     allowDisplayingInsecureContent: false,
     allowRunningInsecureContent: false
   },
-  icon: __dirname+'/icon/icon256.png'
+  icon: __dirname+'/icon/icon.png'
 }
 
 // Our default web preferences (Windows only!!)
@@ -46,7 +46,7 @@ var WindowsWebPreferences = {
     allowDisplayingInsecureContent: false,
     allowRunningInsecureContent: false
   },
-  icon: __dirname+'/icon/icon256.png'
+  icon: __dirname+'/icon/icon.png'
 }
 
 // オブジェクトをマージする関数設定
