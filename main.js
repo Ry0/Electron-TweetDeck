@@ -37,7 +37,10 @@ app.on('ready', function() {
                   label: 'About This App',
                   click: () => openAboutWindow({
                               icon_path: join(__dirname, './icon/about.png'),
-                              copyright: 'Copyright (c) 2016 Ry0_Ka'
+                              copyright: 'Ry0_Ka',
+                              bug_report_url: 'https://twitter.com/Ry0_Ka',
+                              homepage: 'http://ry0.github.io/',
+                              description: 'このアプリはElectronを使ったプログラミングの練習として作成されました．'
                           })
               }
           ]
